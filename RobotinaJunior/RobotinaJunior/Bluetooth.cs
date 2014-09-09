@@ -14,7 +14,7 @@ namespace Gadgeteer.Modules.Velloso
     /// </summary>
     public class Bluetooth : GTM.Module
     {
-            
+
             /// <summary>
             /// Direct access to Serial Port.
             /// </summary>
@@ -136,8 +136,9 @@ namespace Gadgeteer.Modules.Velloso
                            {
                                state = int.Parse(((response.Substring(first, last - first)).Trim()));
                            }
-                           catch{
-                               Debug.Print("state failed");
+                           catch
+                           {
+                               Debug.Print("error");
                            }
                            OnBluetoothStateChanged(this, (BluetoothState)state);
                        }
@@ -457,6 +458,8 @@ namespace Gadgeteer.Modules.Velloso
                     // but this pin is not available in the socket... (see schematics)
                 }
             }
+
+
         }
     }
 

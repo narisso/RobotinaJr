@@ -18,6 +18,9 @@ namespace RobotinaJunior {
         /// <summary>The CerbotController module (no sockets).</summary>
         private Gadgeteer.Modules.GHIElectronics.CerbotController cerbotController;
         
+        /// <summary>The SerCam module using socket 3 of the mainboard.</summary>
+        private Gadgeteer.Modules.GHIElectronics.SerCam serCam;
+        
         /// <summary>This property provides access to the Mainboard API. This is normally not necessary for an end user program.</summary>
         protected new static GHIElectronics.Gadgeteer.FEZCerbot Mainboard {
             get {
@@ -41,6 +44,7 @@ namespace RobotinaJunior {
         
         private void InitializeModules() {
             this.cerbotController = new GTM.GHIElectronics.CerbotController();
+            this.serCam = new GTM.GHIElectronics.SerCam(3);
         }
     }
 }

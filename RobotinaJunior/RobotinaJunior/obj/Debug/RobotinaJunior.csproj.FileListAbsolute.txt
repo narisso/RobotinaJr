@@ -49,6 +49,7 @@ C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\Robotina
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\GHI.OSHW.Hardware.xml
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\Gadgeteer.SPI.pdb
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\Gadgeteer.SPI.xml
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\RobotinaJunior.csprojResolveAssemblyReference.cache
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\TinyCLR_DebugReferences.cache
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\RobotinaJunior.Resources.resources
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\RobotinaJunior.csproj.GenerateResource.Cache
@@ -60,3 +61,10 @@ C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\Robotina
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\le\RobotinaJunior.pdbx
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\RobotinaJunior.exe
 C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\obj\Debug\RobotinaJunior.pdb
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\LE\GTM.GHIElectronics.SerCam.pe
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\BE\GTM.GHIElectronics.SerCam.pe
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\LE\GTM.GHIElectronics.SerCam.pdbx
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\BE\GTM.GHIElectronics.SerCam.pdbx
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\GTM.GHIElectronics.SerCam.dll
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\GTM.GHIElectronics.SerCam.pdb
+C:\Users\oevas_000\documents\visual studio 2012\Projects\RobotinaJunior\RobotinaJunior\bin\Debug\GTM.GHIElectronics.SerCam.xml
