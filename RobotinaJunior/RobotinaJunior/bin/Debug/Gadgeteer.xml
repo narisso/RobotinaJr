@@ -2065,8 +2065,8 @@
             <param name="text">The text to display.</param>
             <param name="font">The font to use for the text display.</param>
             <param name="color">The color of the text.</param>
-            <param name="x">The X cooridinate to begin the text display.</param>
-            <param name="y">The Y cooridinate to begin the text display.</param>
+            <param name="x">The X coordinate to begin the text display.</param>
+            <param name="y">The Y coordinate to begin the text display.</param>
             <remarks>
             This method displays text at the specified screen location. 
             If the text is too long for the display, it will be clipped.
@@ -2077,8 +2077,8 @@
             Displays the specified text within the specified rectangular region.
             </summary>
             <param name="text">The text to display.</param>
-            <param name="x">The X cooridinate of the rectangular region.</param>
-            <param name="y">The Y cooridinate of the rectangular region.</param>
+            <param name="x">The X coordinate of the rectangular region.</param>
+            <param name="y">The Y coordinate of the rectangular region.</param>
             <param name="width">The width of the rectangular region.</param>
             <param name="height">The height of the rectangular region.</param>
             <param name="color">The text color.</param>
@@ -2093,8 +2093,8 @@
             Displays the specified text within the specified rectangular region.
             </summary>
             <param name="text">The text to display.</param>
-            <param name="x">The X cooridinate of the rectangular region.</param>
-            <param name="y">The Y cooridinate of the rectangular region.</param>
+            <param name="x">The X coordinate of the rectangular region.</param>
+            <param name="y">The Y coordinate of the rectangular region.</param>
             <param name="width">The width of the rectangular region.</param>
             <param name="height">The height of the rectangular region.</param>
             <param name="color">The text color.</param>
@@ -2106,8 +2106,8 @@
             Displays the specified text within the specified rectangular region.
             </summary>
             <param name="text">The text to display.</param>
-            <param name="x">The X cooridinate of the rectangular region.</param>
-            <param name="y">The Y cooridinate of the rectangular region.</param>
+            <param name="x">The X coordinate of the rectangular region.</param>
+            <param name="y">The Y coordinate of the rectangular region.</param>
             <param name="width">The width of the rectangular region.</param>
             <param name="height">The height of the rectangular region.</param>
             <param name="color">The text color.</param>
@@ -2118,8 +2118,8 @@
             Displays an ellipse.
             </summary>
             <param name="outlineColor">The color of the ellipse outline.</param>
-            <param name="x">The X cooridinate of the center of the ellipse.</param>
-            <param name="y">The Y cooridinate of the center of the ellipse.</param>
+            <param name="x">The X coordinate of the center of the ellipse.</param>
+            <param name="y">The Y coordinate of the center of the ellipse.</param>
             <param name="xRadius">The radius value for Y.</param>
             <param name="yRadius">The radius value for X.</param>
         </member>
@@ -2136,11 +2136,11 @@
             <param name="xCornerRadius">The X dimension corner radius, or zero for none.</param>
             <param name="yCornerRadius">The Y dimension corner radius, or zero for none.</param>
             <param name="colorGradientStart">The color to begin the background gradient.</param>
-            <param name="xGradientStart">The X cooridinate to begin the background gradient.</param>
-            <param name="yGradientStart">The Y cooridinate to begin the background gradient.</param>
+            <param name="xGradientStart">The X coordinate to begin the background gradient.</param>
+            <param name="yGradientStart">The Y coordinate to begin the background gradient.</param>
             <param name="colorGradientEnd">The color to end the background gradient.</param>
-            <param name="xGradientEnd">The X cooridinate to end the background gradient.</param>
-            <param name="yGradientEnd">The Y cooridinate to end the background gradient.</param>
+            <param name="xGradientEnd">The X coordinate to end the background gradient.</param>
+            <param name="yGradientEnd">The Y coordinate to end the background gradient.</param>
             <param name="opacity">The opacity of the rectangle, 0 (transparent)..256 (opaque).</param>
         </member>
         <member name="M:Gadgeteer.Modules.Module.DisplayModule.SimpleGraphicsInterface.DisplayRectangle(Gadgeteer.Color,System.UInt32,Gadgeteer.Color,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
@@ -2188,10 +2188,10 @@
             </summary>
             <param name="color">The color of the line.</param>
             <param name="thickness">The thickness of the line.</param>
-            <param name="x0">The x-coordinate location of the line's starting point.</param>
-            <param name="y0">The y-coordinate location of the line's starting point.</param>
-            <param name="x1">The x-coordinate location of the line's ending point.</param>
-            <param name="y1">The y-coordinate location of the line's ending point.</param>
+            <param name="x0">The X coordinate of the starting point of the line.</param>
+            <param name="y0">The Y coordinate of the starting point of the line.</param>
+            <param name="x1">The X coordinate of the ending point of the line.</param>
+            <param name="y1">The Y coordinate of the ending point of the line.</param>
         </member>
         <member name="M:Gadgeteer.Modules.Module.DisplayModule.SimpleGraphicsInterface.GetPixel(System.Int32,System.Int32)">
             <summary>
@@ -2206,8 +2206,8 @@
             Sets a specified pixel to the specified color.
             </summary>
             <param name="color">The color to set the pixel to.</param>
-            <param name="x">The X cooridinate of the pixel.</param>
-            <param name="y">The Y cooridinate of the pixel.</param>
+            <param name="x">The X coordinate of the pixel.</param>
+            <param name="y">The Y coordinate of the pixel.</param>
         </member>
         <member name="M:Gadgeteer.Modules.Module.DisplayModule.SimpleGraphicsInterface.DisplayImage(Microsoft.SPOT.Bitmap,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">
             <summary>
@@ -2629,8 +2629,8 @@
             </summary>
             <param name="bitmap">The source bitmap.</param>
             <param name="config">The SPI configuration the display uses.</param>
-            <param name="xSrc">The x-coordinate location of the upper-left corner of the rectangular area in the source bitmap from which the specified pixels are to be copied.</param>
-            <param name="ySrc">The y-coordinate location of the upper-left corner of the rectangular area in the source bitmap from which the specified pixels are to be copied.</param>
+            <param name="xSrc">The X coordinate of the upper-left corner of the rectangular area in the source bitmap from which the specified pixels are to be copied.</param>
+            <param name="ySrc">The Y coordinate of the upper-left corner of the rectangular area in the source bitmap from which the specified pixels are to be copied.</param>
             <param name="width">The width of the rectangular block of pixels to be copied.</param>
             <param name="height">The height of the rectangular block of pixels to be copied.</param>
             <param name="bpp">The encoding to use.</param>

@@ -23,14 +23,16 @@ namespace RobotinaJunior
         private int _lastSize;
         private long _timeOfLastRefresh;
 
+        private bool takingPicture;
+
         // This method is run when the mainboard is powered up or reset.   
         void ProgramStarted()
         {
             Debug.Print("Program Started");
 
             client = bluetooth.ClientMode;
-            bluetooth.SetDeviceName("Gadgeteer");
-            bluetooth.SetPinCode("1234");
+            bluetooth.SetDeviceName("RobotinaJr");
+            bluetooth.SetPinCode("4321");
             bluetooth.DataReceived += new Bluetooth.DataReceivedHandler(bluetooth_DataReceived);
 
             this.serCam.StartStreaming();
@@ -44,45 +46,64 @@ namespace RobotinaJunior
         {
             //Debug.Print("hla");
             client.EnterPairingMode();
-            Thread cameraThread = new Thread(new ThreadStart(CameraThread));
-            cameraThread.Start();
         }
         void bluetooth_DataReceived(Bluetooth sender, string data)
         {
-            string[] ind_data = data.Split(';');
-            int left_speed = Int32.Parse(ind_data[0]);
-            int right_speed = Int32.Parse(ind_data[1]);
-
             Debug.Print("received data");
-            cerbotController.SetMotorSpeed(left_speed, right_speed);
+            if (data == "takePicture")
+            {
+                TakePicture();
+            }
+            else
+            {
+                try
+                {
+                    string[] ind_data = data.Split(';');
+                    int left_speed = Int32.Parse(ind_data[0]);
+                    int right_speed = Int32.Parse(ind_data[1]);
+                    cerbotController.SetMotorSpeed(left_speed, right_speed);
+                }
+                catch (Exception e)
+                {
+                    
+                }
+            }
         }
+
+        public void TakePicture()
+        {
+            if (! takingPicture)
+            {
+                Debug.Print("Taking Picture");
+                Thread cameraThread = new Thread(new ThreadStart(CameraThread));
+                cameraThread.Start();
+            }
+
+        }
+
         public void CameraThread()
         {
-            //_bitmap = new Bitmap(320, 240);
             this.serCam.StartStreaming();
-            while (true)
+
+            while( ! (serCam.isNewImageReady && bluetooth.IsConnected) )
             {
-                Debug.Print("SerCamready: " + serCam.isNewImageReady);
-                Debug.Print("bluethootConnected: " + bluetooth.IsConnected);
-
-                if (serCam.isNewImageReady && bluetooth.IsConnected)
-                {
-                    //serCam.DrawImage(_bitmap, 0, 0, 320, 240);
-                    byte[] bytes = serCam.dataImage;
-                    if (bytes.Length != _lastSize)
-                    {
-                        byte[] arr=IntegerToByteArray(bytes.Length);
-                        Debug.Print(arr.ToString());
-                        client.Send(arr.ToString());
-                        _lastSize = bytes.Length;
-                        _timeOfLastRefresh = DateTime.Now.Ticks;
-
-                        serCam.StopStreaming();
-                        serCam.StartStreaming();
-                    }
-                }
-                Thread.Sleep(200);
+                Thread.Sleep(10);
             }
+            byte[] bytes = serCam.dataImage;
+            if (bytes.Length != _lastSize)
+            {
+                Debug.Print(bytes.Length.ToString());
+                client.Send(IntegerToByteArray(bytes.Length));
+                client.Send(bytes);
+                _lastSize = bytes.Length;
+                _timeOfLastRefresh = DateTime.Now.Ticks;
+
+                serCam.StopStreaming();
+                serCam.StartStreaming();
+
+                takingPicture = false;
+            }
+
         }
         private byte[] IntegerToByteArray(int length)
         {

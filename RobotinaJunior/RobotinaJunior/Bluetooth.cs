@@ -402,6 +402,12 @@ namespace Gadgeteer.Modules.Velloso
                     Debug.Print("Sending: " + message);
                     bluetooth.serialPort.WriteLine(message);
                 }
+
+                public void Send(byte[] message)
+                {
+                    Debug.Print("Sending: " + message.Length+" bytes");
+                    bluetooth.serialPort.Write(message);
+                }
             }
 
         /// <summary>
